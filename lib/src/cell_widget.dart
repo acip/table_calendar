@@ -56,8 +56,8 @@ class CellWidget extends StatelessWidget {
   TextStyle _buildCellTextStyle() {
     final highlightStyle = TextStyle().copyWith(color: Colors.grey[50], fontSize: 16.0);
     final outsideStyle = TextStyle().copyWith(color: Colors.grey[500]);
-    final weekendStyle = TextStyle().copyWith(color: Colors.red[500]);
-    final outsideWeekendStyle = TextStyle().copyWith(color: Colors.red[200]);
+    final weekendStyle = TextStyle().copyWith(color: Colors.grey[300]);
+    final outsideWeekendStyle = TextStyle().copyWith(color: Colors.grey[200]);
 
     if (isSelected || isToday) {
       return highlightStyle;
