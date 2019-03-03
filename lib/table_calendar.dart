@@ -211,7 +211,7 @@ class _TableCalendarState extends State<TableCalendar> {
     final children = <Widget>[];
 
     final weekdayStyle = TextStyle().copyWith(color: Colors.grey[700], fontSize: 15.0);
-    final weekendStyle = TextStyle().copyWith(color: Colors.grey[500], fontSize: 15.0);
+    final weekendStyle = TextStyle().copyWith(color: Colors.grey[600], fontSize: 15.0);
 
     children.add(Center(child: Text(daysOfWeek.first, style: weekendStyle)));
     children.addAll(
@@ -256,7 +256,7 @@ class _TableCalendarState extends State<TableCalendar> {
 
     if (widget.events.containsKey(date) && widget.events[date].isNotEmpty) {
       final children = <Widget>[content];
-      final maxMarkers = 4;
+      final maxMarkers = 1;
 
       children.add(
         Positioned(
