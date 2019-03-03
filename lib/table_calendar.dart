@@ -154,16 +154,20 @@ class _TableCalendarState extends State<TableCalendar> {
     );
   }
 
+  toggleCalendarFormat() {
+    setState(() {
+        _calendarLogic.toggleCalendarFormat();
+      });
+
+    if (widget.onFormatChanged != null) {
+      widget.onFormatChanged(_calendarLogic.calendarFormat);
+    }
+  }
+
   Widget _buildHeaderToggle() {
     return GestureDetector(
       onTap: () {
-        setState(() {
-          _calendarLogic.toggleCalendarFormat();
-        });
-
-        if (widget.onFormatChanged != null) {
-          widget.onFormatChanged(_calendarLogic.calendarFormat);
-        }
+        toggleCalendarFormat();
       },
       child: Container(
         decoration: widget.formatToggleDecoration ??
