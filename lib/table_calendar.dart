@@ -447,16 +447,11 @@ class _TableCalendarState extends State<TableCalendar> with SingleTickerProvider
       _buildDaysOfWeek(),
     ];
 
-<<<<<<< HEAD
-    final weekdayStyle = TextStyle().copyWith(color: Colors.grey[700], fontSize: 15.0);
-    final weekendStyle = TextStyle().copyWith(color: Colors.grey[600], fontSize: 15.0);
-=======
     int x = 0;
     while (x < _calendarLogic.visibleDays.length) {
       children.add(_buildTableRow(_calendarLogic.visibleDays.skip(x).take(daysInWeek).toList()));
       x += daysInWeek;
     }
->>>>>>> 788322744f93f1efac7c00b7396ff6e7d68c5116
 
     return Table(
       // Makes this Table fill its parent horizontally
