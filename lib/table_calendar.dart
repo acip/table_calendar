@@ -509,16 +509,6 @@ class _TableCalendarState extends State<TableCalendar> with SingleTickerProvider
 
     if (key != null) {
       final children = <Widget>[content];
-<<<<<<< HEAD
-      final maxMarkers = 1;
-
-      children.add(
-        Positioned(
-          bottom: 5.0,
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: widget.events[date].take(maxMarkers).map((_) => _buildMarker()).toList(),
-=======
       final events = eventKey != null ? widget.events[eventKey].take(widget.calendarStyle.markersMaxAmount) : [];
       final holidays = holidayKey != null ? widget.holidays[holidayKey] : [];
 
@@ -529,7 +519,6 @@ class _TableCalendarState extends State<TableCalendar> with SingleTickerProvider
             key,
             events.toList(),
             holidays,
->>>>>>> 788322744f93f1efac7c00b7396ff6e7d68c5116
           ),
         );
       } else {
